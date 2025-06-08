@@ -1,0 +1,39 @@
+<launch>
+  <!-- Gunakan waktu simulasi -->
+  <param name="use_sim_time" value="true"/>
+
+  <!-- Load robot_description dari xacro -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find soccer_3)/urdf/soccer_3.urdf'" />
+
+  <!-- Spawn robot ke Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model soccer_3"
+        output="screen" />
+
+  <!-- Jalankan Gazebo dengan world kosong -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+  </include>
+
+  <!-- Publikasi TF dan joint states -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- Load konfigurasi controller -->
+  <rosparam file="$(find soccer_3)/config/omni_control.yaml" command="load" />
+
+  <!-- Jalankan controller manager -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+        args="brwheel_effort_controller blwheel_effort_controller frwheel_effort_controller flwheel_effort_controller"
+        output="screen" />
+
+  <!-- Jalankan node pengendali omni -->
+  <node name="omni_effort_controller" pkg="soccer_3" type="omni_cmd_vel_effort.py" output="screen">
+    <!-- Parameter pengendali -->
+    <param name="effort_gain" value="0.5" />
+    <param name="wheel_radius" value="0.05" />
+    <param name="robot_radius" value="0.2" />
+  </node>
+</launch>
+

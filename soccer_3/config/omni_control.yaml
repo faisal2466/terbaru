@@ -1,0 +1,32 @@
+brwheel_effort_controller:
+  type: effort_controllers/JointEffortController
+  joint: brwheel
+  pid:
+    p: 10.0  # Tingkatkan nilai P
+    i: 0.0
+    d: 0.0  # Tingkatkan nilai D
+
+blwheel_effort_controller:
+  type: effort_controllers/JointEffortController
+  joint: blwheel
+  pid:
+    p: 10.0  # Tingkatkan nilai P
+    i: 0.0
+    d: 0.0  # Tingkatkan nilai D
+
+frwheel_effort_controller:
+  type: effort_controllers/JointEffortController
+  joint: frwheel
+  pid:
+    p: 10.0  # Tingkatkan nilai P
+    i: 0.0
+    d: 0.0  # Tingkatkan nilai D
+
+flwheel_effort_controller:
+  type: effort_controllers/JointEffortController
+  joint: flwheel
+  pid:
+    p: 10.0  # Tingkatkan nilai P
+    i: 0.0
+    d: 0.0 # Tingkatkan nilai D
+

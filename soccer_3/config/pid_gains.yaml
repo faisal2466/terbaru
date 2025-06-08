@@ -1,0 +1,6 @@
+gazebo_ros_control:
+  pid_gains:
+    frwheel: {p: 10.0, i: 0.1, d: 0.01}
+    flwheel: {p: 10.0, i: 0.1, d: 0.01}
+    brwheel: {p: 10.0, i: 0.1, d: 0.01}
+    blwheel: {p: 10.0, i: 0.1, d: 0.01}

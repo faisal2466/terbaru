@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="soccer_3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-9.3634619746652E-07 -0.0241225870755278 -0.00749999978335992"
+        rpy="0 0 0" />
+      <mass
+        value="2.75521208964772" />
+      <inertia
+        ixx="0.0397108097238004"
+        ixy="-7.11937190042332E-08"
+        ixz="-3.100158938415E-11"
+        iyy="0.0494133307222501"
+        iyz="1.03180943985165E-10"
+        izz="0.0890208208493428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base2_link">
+    <inertial>
+      <origin
+        xyz="-5.53627679116264E-05 -0.0012727983100087 0.153777210791196"
+        rpy="0 0 0" />
+      <mass
+        value="2.00324911916193" />
+      <inertia
+        ixx="0.0960582368968012"
+        ixy="0.00107802559720345"
+        ixz="-1.21764240635392E-05"
+        iyy="0.0954939713935128"
+        iyz="-0.000397573344765787"
+        izz="0.0608742796614766" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/base2_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/base2_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base2"
+    type="fixed">
+    <origin
+      xyz="0 0 0.222"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="base2_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="penyanggakiri_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.02 -6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.104766172605227" />
+      <inertia
+        ixx="0.000433217864027935"
+        ixy="-8.53030006695309E-22"
+        ixz="-2.55528950706154E-20"
+        iyy="0.000433217864027935"
+        iyz="9.06985840261303E-21"
+        izz="3.6617796907407E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/penyanggakiri_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588235294117647 0.588235294117647 0.631372549019608 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/penyanggakiri_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="penyanggakiri"
+    type="fixed">
+    <origin
+      xyz="-0.222500000000001 0.0200000000000538 0.109"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="penyanggakiri_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="penyanggakanan_Link">
+    <inertial>
+      <origin
+        xyz="0 -0.02 -1.04083408558608E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.104766172605227" />
+      <inertia
+        ixx="0.000433217864027935"
+        ixy="5.16987882845642E-23"
+        ixz="1.00687677853037E-20"
+        iyy="0.000433217864027935"
+        iyz="5.8308637220237E-21"
+        izz="3.66177969074071E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/penyanggakanan_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.588235294117647 0.588235294117647 0.631372549019608 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/penyanggakanan_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="penyanggakanan"
+    type="fixed">
+    <origin
+      xyz="0.222 0.0199999999999766 0.109"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="penyanggakanan_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="frwheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0222082248789537 1.88625562387301E-05 3.40787825264983E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.208129547871772" />
+      <inertia
+        ixx="9.83251842819817E-05"
+        ixy="-7.19317878509042E-14"
+        ixz="9.45281454716786E-14"
+        iyy="5.36058632876508E-05"
+        iyz="8.67931151752009E-09"
+        izz="5.36034464443978E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/frwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/frwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="frwheel"
+    type="continuous">
+    <origin
+      xyz="0.203645812810443 0.200794266666004 0.0245164823436376"
+      rpy="0 0 0.785398163397448" />
+    <parent
+      link="base_link" />
+    <child
+      link="frwheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="flwheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0222082248788698 9.96517412388265E-06 -3.76544260001291E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.208129547871771" />
+      <inertia
+        ixx="9.83251842835079E-05"
+        ixy="1.12325557519556E-13"
+        ixz="-1.16400062014233E-14"
+        iyy="5.35960344408307E-05"
+        iyz="1.57446701783891E-09"
+        izz="5.36132752920735E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/flwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/flwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="flwheel"
+    type="continuous">
+    <origin
+      xyz="-0.200794266665985 0.203645812810446 0.0245164823436381"
+      rpy="0 0 2.35619449019235" />
+    <parent
+      link="base_link" />
+    <child
+      link="flwheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="brwheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0222082248788877 3.50991751861818E-05 -1.68881029577114E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.208129547871772" />
+      <inertia
+        ixx="9.83251842836503E-05"
+        ixy="8.05523064293908E-14"
+        ixz="7.92986559270935E-14"
+        iyy="5.36044427817281E-05"
+        iyz="-8.76046462435255E-09"
+        izz="5.36048669511918E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/brwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/brwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="brwheel"
+    type="continuous">
+    <origin
+      xyz="0.200794266666001 -0.203645812810428 0.0245164823436377"
+      rpy="0 0 -0.78539816339745" />
+    <parent
+      link="base_link" />
+    <child
+      link="brwheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="blwheel_Link">
+    <inertial>
+      <origin
+        xyz="-0.0222082248789046 -3.72891443660706E-05 -1.12552064237062E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.208129547871772" />
+      <inertia
+        ixx="9.83251842935072E-05"
+        ixy="-4.30353723577387E-15"
+        ixz="-1.14946527308265E-13"
+        iyy="5.36133631859635E-05"
+        iyz="-9.77725386758499E-10"
+        izz="5.35959465547853E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/blwheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/blwheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="blwheel"
+    type="continuous">
+    <origin
+      xyz="-0.203645812810408 -0.200794266665966 0.0245164823436366"
+      rpy="0 0 -2.35619449019235" />
+    <parent
+      link="base_link" />
+    <child
+      link="blwheel_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="pkn1_Link">
+    <inertial>
+      <origin
+        xyz="-0.00683616500204631 -0.00683616500204653 -0.0177175361494385"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136210617991687" />
+      <inertia
+        ixx="6.06218493378257E-06"
+        ixy="2.33201981515106E-06"
+        ixz="-6.78112636484805E-07"
+        iyy="6.06218493378257E-06"
+        iyz="-6.78112636484803E-07"
+        izz="8.05408292898715E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pkn1"
+    type="fixed">
+    <origin
+      xyz="0.164036273554157 0.164036273554143 0.0265"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pkn1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pkn2_Link">
+    <inertial>
+      <origin
+        xyz="0.00683616500204653 -0.00683616500204631 -0.0177175361494386"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136210617991685" />
+      <inertia
+        ixx="6.06218493378249E-06"
+        ixy="-2.33201981515103E-06"
+        ixz="6.78112636484794E-07"
+        iyy="6.06218493378249E-06"
+        iyz="-6.78112636484806E-07"
+        izz="8.05408292898708E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pkn2"
+    type="fixed">
+    <origin
+      xyz="-0.164036273554126 0.164036273554159 0.0265"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pkn2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pkn3_Link">
+    <inertial>
+      <origin
+        xyz="-0.00683616500204653 0.00683616500204642 -0.0177175361494385"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136210617991686" />
+      <inertia
+        ixx="6.06218493378251E-06"
+        ixy="-2.33201981515106E-06"
+        ixz="-6.78112636484811E-07"
+        iyy="6.06218493378255E-06"
+        iyz="6.78112636484798E-07"
+        izz="8.0540829289871E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pkn3"
+    type="fixed">
+    <origin
+      xyz="0.164036273554141 -0.16403627355414 0.0265"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pkn3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pkn4_Link">
+    <inertial>
+      <origin
+        xyz="0.0263223733237299 0.0234124025208765 -0.0159899740664732"
+        rpy="0 0 0" />
+      <mass
+        value="0.0136210617991687" />
+      <inertia
+        ixx="6.06218493378257E-06"
+        ixy="2.33201981515106E-06"
+        ixz="6.78112636484796E-07"
+        iyy="6.06218493378257E-06"
+        iyz="6.78112636484804E-07"
+        izz="8.05408292898716E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/pkn4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pkn4"
+    type="fixed">
+    <origin
+      xyz="-0.18352248187581 -0.180612511072938 0.0247724379170347"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="pkn4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="dc1_Link">
+    <inertial>
+      <origin
+        xyz="-0.0617689754383473 -0.0616020922647164 -0.000311951031879608"
+        rpy="0 0 0" />
+      <mass
+        value="0.19177508814126" />
+      <inertia
+        ixx="0.000162200525677456"
+        ixy="-0.000117950772530602"
+        ixz="-1.74504030155337E-07"
+        iyy="0.000164047508620232"
+        iyz="-1.16885406395647E-07"
+        izz="0.000281366663564629" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dc1"
+    type="fixed">
+    <origin
+      xyz="0.183522481875841 0.180612511072973 0.024772437917016"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="dc1_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="dc2_Link">
+    <inertial>
+      <origin
+        xyz="0.0616020922647165 -0.0617689754383476 -0.000311951031879545"
+        rpy="0 0 0" />
+      <mass
+        value="0.19177508814126" />
+      <inertia
+        ixx="0.000164047508620232"
+        ixy="0.000117950772530601"
+        ixz="1.1688540639572E-07"
+        iyy="0.000162200525677455"
+        iyz="-1.74504030155396E-07"
+        izz="0.000281366663564627" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dc2"
+    type="fixed">
+    <origin
+      xyz="-0.180612511072954 0.183522481875847 0.0247724379170299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="dc2_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="dc3_Link">
+    <inertial>
+      <origin
+        xyz="-0.0616020922647162 0.0617689754383473 -0.000311951031879608"
+        rpy="0 0 0" />
+      <mass
+        value="0.19177508814126" />
+      <inertia
+        ixx="0.000164047508620232"
+        ixy="0.000117950772530602"
+        ixz="-1.168854063957E-07"
+        iyy="0.000162200525677456"
+        iyz="1.74504030155392E-07"
+        izz="0.000281366663564628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dc3"
+    type="fixed">
+    <origin
+      xyz="0.180612511072971 -0.183522481875824 0.0247724379170427"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="dc3_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="dc4_Link">
+    <inertial>
+      <origin
+        xyz="-0.0617689754383473 -0.0616020922647166 -0.000311951031879594"
+        rpy="0 0 0" />
+      <mass
+        value="0.19177508814126" />
+      <inertia
+        ixx="0.000162200525677456"
+        ixy="-0.000117950772530602"
+        ixz="-1.74504030155377E-07"
+        iyy="0.000164047508620231"
+        iyz="-1.16885406395698E-07"
+        izz="0.000281366663564627" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/dc4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dc4"
+    type="fixed">
+    <origin
+      xyz="-0.18352248187581 -0.180612511072938 0.0247724379170347"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="base_link" />
+    <child
+      link="dc4_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera_Link">
+    <inertial>
+      <origin
+        xyz="0.000589207936300129 -0.0128570576510844 -0.0167997695311907"
+        rpy="0 0 0" />
+      <mass
+        value="0.0858072153505564" />
+      <inertia
+        ixx="1.32900276151448E-05"
+        ixy="-1.88152021020128E-06"
+        ixz="8.18738104319757E-08"
+        iyy="4.71418333933568E-05"
+        iyz="-1.36629216190221E-06"
+        izz="4.95502027950492E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://soccer_3/meshes/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera"
+    type="fixed">
+    <origin
+      xyz="-0.000171500140926373 0.00336097004609937 0.754166259306042"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+<!-- Transmission for Back Right Wheel -->
+<transmission name="trans_brwheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="brwheel_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="brwheel">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<!-- Transmission for Back Left Wheel -->
+<transmission name="trans_blwheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="blwheel_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="blwheel">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<!-- Transmission for Front Right Wheel -->
+<transmission name="trans_frwheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="frwheel_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="frwheel">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+<!-- Transmission for Front Left Wheel -->
+<transmission name="trans_flwheel">
+  <type>transmission_interface/SimpleTransmission</type>
+  <actuator name="flwheel_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+  <joint name="flwheel">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so"/>
+  </gazebo>
+
+  
+
+</robot>
