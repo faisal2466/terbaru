@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <arg name="x" default="0.0" />
+  <arg name="y" default="0.0" />
+  <arg name="z" default="0.0" />
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="verbose" default="true"/>
+
+  <!-- Robot URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find final_description)/xacro/main.urdf.xacro'" />
+  <rosparam file="$(find final_control)/config/controllers.yaml" command="load"/>
+  <rosparam file="$(find final_control)/config/params_trot.yaml" command="load"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="laser" args="0 0 0 0 0 0 world base_link 10"/>
+
+  <!-- LAUNCH CUSTOM WORLD -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- <arg name="world_name" value="$(find final_gazebo)/worlds/robocup15MSL.world"/> --> <!-- Pastikan file .world ada -->
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
+
+  <!-- SPAWN ROBOT -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-urdf -x $(arg x) -y $(arg y) -z $(arg z) -model final -param robot_description"/>
+
+  <!-- SPAWN CONTROLLERS -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner"
+        respawn="false" output="screen" ns="/final"
+        args="--namespace=/final
+              joint_state_controller
+              front_right_joint_velocity_controller
+              front_left_joint_velocity_controller
+              back_right_joint_velocity_controller
+              back_left_joint_velocity_controller"/>
+
+  <!-- ROBOT STATE PUBLISHER -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+        respawn="false" output="screen">
+    <param name="publish_frequency" type="double" value="30.0"/>
+    <remap from="/joint_states" to="/final/joint_states"/>
+  </node>
+
+  <!-- CONTROLLER NODE -->
+  <node name="controller" pkg="final_control" type="controller_node" output="screen"/>
+
+  <!-- BALL SPAWNER -->
+  <param name="ball_description" command="$(find xacro)/xacro '$(find final_description)/xacro/ball.urdf.xacro'" />
+  <node name="ball_spawner" pkg="gazebo_ros" type="spawn_model" output="screen"
+        args="-urdf -model bola_kesbi -param ball_description -x 2.0 -y 0.0 -z 0.05"/>
+
+</launch>
