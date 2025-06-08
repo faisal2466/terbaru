@@ -1,0 +1,11 @@
+<launch>
+    <!-- Gunakan clock simulasi (jika menggunakan Gazebo) -->
+    <param name="use_sim_time" value="true" />
+
+    <!-- Node untuk deteksi YOLOv8 -->
+    <node name="yolov8_inference_node" pkg="yolobot_recognition" type="yolov8_ros2_pt.py" output="screen" />
+
+    <!-- Node untuk subscribe hasil deteksi dan menampilkan bounding box -->
+    <node name="yolov8_subscriber_node" pkg="yolobot_recognition" type="yolov8_ros2_subscriber.py" output="screen" />
+</launch>
+
